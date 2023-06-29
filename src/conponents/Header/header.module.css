@@ -1,0 +1,46 @@
+.navLogo {
+  background: url("https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/flipkart-095e08.svg");
+  background-size: 111px;
+  background-repeat: no-repeat;
+  background-position: -35px 5px;
+  width: 100px;
+  height: 27px;
+}
+nav > div {
+  width: 90%;
+  margin: 0 auto;
+}
+.right {
+  width: 40%;
+}
+.right > div {
+  padding: 5px 7px;
+  border-radius: 5px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right > div > span {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+}
+.figure {
+  line-height: 7px;
+}
+.signin:hover {
+  background-color: #2a55e5;
+  transition: ease-in 300ms;
+}
+.signin:hover>span {
+    color: white;
+    
+}
+.searchFrom{
+  background-color: #f0f5ff;
+}
+.searchFrom input{
+background-color: #f0f5ff;
+}
