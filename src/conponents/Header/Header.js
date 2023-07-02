@@ -11,7 +11,7 @@ const signInMouseEnterHandle=()=>{
     setMouseEnter(true)
 }
   return (
-    <header>
+    <header className={classes.header}>
       <nav className="navbar navbar-expend-lg bg-body-tertiary">
         <div >
           <div className="contaienr-fluid d-flex w-100 justify-content-between">
