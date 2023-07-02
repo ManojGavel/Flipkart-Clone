@@ -1,0 +1,7 @@
+.card{
+    width: 233px;
+}
+.img{
+    height: 150px;
+    object-fit: contain;
+}

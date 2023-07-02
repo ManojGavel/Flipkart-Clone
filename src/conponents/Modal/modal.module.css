@@ -1,0 +1,16 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    top: 0px;
+    background-color: #0c0c0cab;
+    z-index: 99999;
+}
+form>img{
+    object-fit: contain;
+}
+form{
+    width: 30vw;
+}

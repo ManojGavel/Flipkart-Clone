@@ -4,7 +4,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { AddShoppingCart, KeyboardArrowDown, KeyboardArrowUp, PersonOutline, ShoppingCart } from "@mui/icons-material";
 import classes from "./header.module.css";
-export default function Header() {
+export default function Header(props) {
     const[mouseEnter,setMouseEnter]=useState(false);
 const signInMouseEnterHandle=()=>{
     console.log(mouseEnter)
@@ -47,12 +47,12 @@ const signInMouseEnterHandle=()=>{
                 </span>
                 <span>Become a Seller</span>
               </div>
-              <div className={classes.signin} onMouseOut={()=>{setMouseEnter(false)}} onMouseEnter={signInMouseEnterHandle}>
-                <span>
-                  <PersonOutline />
+              <button  className={`${classes.signin} btn btn-light`}onMouseOut={()=>{setMouseEnter(false)}} onMouseEnter={signInMouseEnterHandle}>
+                <span onMouseOut={()=>{setMouseEnter(false)}} onMouseEnter={signInMouseEnterHandle}>
+                  <PersonOutline  />
                 </span>
-                <span>Sign in {!mouseEnter?<KeyboardArrowDown/>:<KeyboardArrowUp/>}</span>
-              </div>
+                <span onMouseOut={()=>{setMouseEnter(false)}} onClick={()=>props.setModalIsVisible(preValue=>!preValue)} onMouseEnter={signInMouseEnterHandle}>Sign in {!mouseEnter?<KeyboardArrowDown/>:<KeyboardArrowUp/>}</span>
+              </button>
               <div>
                 <span>
                   <AddShoppingCart />

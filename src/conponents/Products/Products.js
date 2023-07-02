@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./product.module.css";
-import CurrencyFormat from "react-currency-format";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
 
 export default function Products() {

@@ -1,0 +1,15 @@
+.img{
+    width: 15%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    /* mix-blend-mode: color-burn;   */
+}
+.products_ch1{
+    flex: .9;
+}
+.products_ch2{
+    flex: .1;
+}
+.section{
+    flex: 0.3;
+}
