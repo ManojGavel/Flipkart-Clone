@@ -1,0 +1,27 @@
+.ul>li::before {
+  content: "\2022";
+  color: lightgray;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  /* margin-left: -1em; */
+  /* background-color: green; */
+}
+.ul {
+  list-style: none;
+}
+.img{
+    flex: 0.2;
+    object-fit: contain;
+}
+.info{
+    flex: 0.6;
+}
+.price{
+    flex: 0.2;
+}
+.star svg{
+    font-size: 14px;
+    position: relative;
+    top: -2px;
+}

@@ -1,27 +1,32 @@
+import { useState } from "react";
+import "./App.css";
+import Modal from "./conponents/Modal/Modal";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import RootLayout from "./conponents/RootLayout/RootLayout";
+import Home from "./conponents/Home/Home";
+import ShowProduct from "./conponents/ShowProduct/ShowProduct";
 
-import { useState } from 'react';
-import './App.css';
-import Header from './conponents/Header/Header';
-import Menu from './conponents/Menu/Menu';
-import Modal from './conponents/Modal/Modal';
-import MultipleSectioins from './conponents/MultipleSections/MultipleSectioins';
-import Offers from './conponents/Offers/Offers';
-import Products from './conponents/Products/Products';
-import Students from './conponents/StudentsSection/Students';
-import CarouselImg from './conponents/carouselImg/CarouselImg';
 
 function App() {
-  const [modalVisible,setModalIsVisible]=useState(false)
+  // const  [{},dispatch]= useStateValue()
+  const [modalVisible, setModalIsVisible] = useState(false);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout setModalIsVisible={setModalIsVisible} />,
+      children: [
+        { path: "/", element: <Home /> },
+        {
+          path: "/productShow",
+          element: <ShowProduct />,
+        },
+      ],
+    },
+  ]);
   return (
     <div className="App">
-     {modalVisible&& <Modal setModalIsVisible={setModalIsVisible}/>}
-      <Header setModalIsVisible={setModalIsVisible}/>
-      <Menu/>
-      <CarouselImg/>
-      <Products/>
-      <Offers/>
-      <Students/>
-      <MultipleSectioins/>
+      {modalVisible && <Modal setModalIsVisible={setModalIsVisible} />}
+      <RouterProvider router={router} />
     </div>
   );
 }

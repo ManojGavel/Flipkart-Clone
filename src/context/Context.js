@@ -1,8 +1,14 @@
 import { createContext, useContext, useReducer } from "react";
 
-const Context=createContext();
 
-export const ContextProvider=({reducer,initialState,children})=>{
-    <Context.Provider value={useReducer(reducer,initialState)}>{children}</Context.Provider>
-}
-export const ContextUse=()=>useContext(Context)
+//prepares the dataLayer
+export const StateContext=createContext();
+
+//wrap our app and provide the data layer
+export const SetProvider=({reducer,initialState,children})=>(
+    <StateContext.Provider value={useReducer(reducer,initialState)}>
+        {children}
+    </StateContext.Provider>
+)
+  const useStateValue=()=>useContext(StateContext)
+  export { useStateValue}

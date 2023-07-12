@@ -4,6 +4,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { AddShoppingCart, KeyboardArrowDown, KeyboardArrowUp, PersonOutline, ShoppingCart } from "@mui/icons-material";
 import classes from "./header.module.css";
+import { Link } from "react-router-dom";
 export default function Header(props) {
     const[mouseEnter,setMouseEnter]=useState(false);
 const signInMouseEnterHandle=()=>{
@@ -16,7 +17,7 @@ const signInMouseEnterHandle=()=>{
         <div >
           <div className="contaienr-fluid d-flex w-100 justify-content-between">
             <div className="left w-50 d-flex">
-              <a href="/" className="text-decoration-none">
+              <Link onClick={()=>console.log('Clicked to product')} to="/" className="text-decoration-none">
                 <figure className={`m-0 ${classes.figure}`}>
                   <div className={classes.navLogo}></div>
                   <span>
@@ -28,7 +29,7 @@ const signInMouseEnterHandle=()=>{
                     />
                   </span>
                 </figure>
-              </a>
+              </Link>
               <div className="w-100">
                 <form className={`w-100 ms-3 d-flex border p-1 mt-2 rounded-1 ${classes.searchFrom}`}>
                   <SearchIcon  />

@@ -1,6 +1,9 @@
 import React from "react";
 import classes from "./product.module.css";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
+import { Link } from "react-router-dom";
+import {useStateValue} from "../../context/Context";
+
 
 export default function Products() {
   const porducts = [
@@ -45,6 +48,8 @@ export default function Products() {
       price: 50000,
     },
   ];
+
+ const [state,dispatch]= useStateValue()
   return (
     <section className="mx-3">
       <div className="d-flex">
@@ -54,6 +59,7 @@ export default function Products() {
             <div>
               <div className="card-body d-flex justify-content-around">
                 {porducts.map((element) => (
+                  <Link onClick={()=>dispatch({type:"iphone_14"})} to="/productShow">
                   <div
                     key={element.id}
                     className="card"
@@ -75,6 +81,7 @@ export default function Products() {
                       </p>
                     </div>
                   </div>
+                  </Link>
                 ))}
               </div>
             </div>
