@@ -33,7 +33,7 @@ export default function Products() {
     },
     {
       id: (Math.random() * 1000000000).toFixed(),
-      name: "Iphone 14/14plus",
+      name: "Moto g73",
       offer: "incl of Offers",
       image:
         "https://rukminim1.flixcart.com/image/210/210/xif0q/mobile/r/k/h/g73-5g-paux0023in-motorola-original-imagngjh7epkhqdg.jpeg?q=80",
@@ -41,7 +41,7 @@ export default function Products() {
     },
     {
       id: (Math.random() * 1000000000).toFixed(),
-      name: "Iphone 14/14plus",
+      name: "Insta camera",
       offer: "incl of Offers",
       image:
         "https://rukminim1.flixcart.com/image/210/210/j6zcwi80/instant-camera/5/q/n/ice-blue-with-brown-case-40-shots-mini-9-ice-blue-with-brown-original-imaex6nzgyqqzhfk.jpeg?q=80",
@@ -59,7 +59,7 @@ export default function Products() {
             <div>
               <div className="card-body d-flex justify-content-around">
                 {porducts.map((element) => (
-                  <Link onClick={()=>dispatch({type:"iphone_14"})} to="/productShow">
+                  <Link key={element.id} onClick={()=>dispatch({type: element.name})} to="/productShow">
                   <div
                     key={element.id}
                     className="card"

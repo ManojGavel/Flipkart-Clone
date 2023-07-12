@@ -1,4 +1,4 @@
-export const iphone_14 = [
+export const iphone_14_iphone_14_plus = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/u/f/-original-imaghxa5hvapbfds.jpeg?q=70",
     name: "APPLE iPhone 14 (Purple, 128 GB)",
@@ -30,20 +30,131 @@ export const iphone_14 = [
     offer:{price:89900, off:11},
   },      
 ];
-export const iphone_14_plus = [
+export const SAMSUNG_Galaxy_S21_FE_5G = [
     {
-      img: "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70",
-      name: "APPLE iPhone 14 Plus (Starlight, 128 GB)",
-      rating: "4.7",
-      review: "39,756 Ratings & 1,529 Reviews",
+      img: "https://rukminim2.flixcart.com/image/312/312/kzrbiq80/mobile/h/x/n/galaxy-s21-fe-5g-sm-g990ezaiinu-samsung-original-imagbpfzbrnueypq.jpeg?q=70",
+      name: "SAMSUNG Galaxy S21 FE 5G (Graphite, 128 GB)",
+      rating: "4.3",
+      review: "59,439 Ratings & 5,827 Reviews",
       spacefication: [
-        "128 GB ROM",
-        "17.02 cm (6.7 inch) Super Retina XDR Display",
-        "12MP + 12MP | 12MP Front Camera",
-        "A15 Bionic Chip, 6 Core Processor Processor",
-        "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+        "8 GB RAM | 128 GB ROM",
+        "16.26 cm (6.4 inch) Full HD+ Display",
+        "12MP + 12MP + 8MP (OIS) | 32MP Front Camera",
+        "4500 mAh Lithium-ion Battery",
+        "1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warranty for In-Box Accessories",
       ],
-      price:79900,
-      offer:{price:89900, off:11},
+      price:39999,
+      offer:{price:47999, off:46},
+    },
+    {
+      img: "https://rukminim2.flixcart.com/image/312/312/l30hmkw0/mobile/w/j/o/galaxy-s21-fe-5g-sm-g990ewziinu-samsung-original-image8dzwv3bch4k.jpeg?q=70",
+      name: "SAMSUNG Galaxy S21 FE 5G (White, 256 GB)",
+      rating: "4.3",
+      review: "59,439 Ratings & 5,827 Reviews",
+      spacefication: [
+        "8 GB RAM | 256 GB ROM",
+        "16.26 cm (6.4 inch) Full HD+ Display",
+        "12MP + 12MP + 8MP (OIS) | 32MP Front Camera",
+        "4500 mAh Lithium-ion Battery",
+        "1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warranty for In-Box Accessories",
+      ],
+      price:48499,
+      offer:{price:69999, off:30},
     },    
+  ];
+  export const TEMPERED_GALSS = [
+    {
+      img: "https://rukminim2.flixcart.com/image/612/612/xif0q/screen-guard/edge-to-edge-tempered-glass/5/t/b/gsaug02-gorilla-cases-original-imaghkdfngmybbsg.jpeg?q=70",
+      name: "Gorilla Cases Edge To Edge Tempered Glass for Nothing Phone 1",
+      rating: "3.3",
+      review: "59,439 Ratings & 5,827 Reviews",
+      spacefication: [
+        "6.4 Inch | Noting Phone 1",
+        "16.26 cm (6.4 inch) Full Sereen GG5",
+        "Edge to Edge | 100% Guarantee",
+        "Less scratch",
+        "1 Tempered Glass with Box",
+      ],
+      price:199,
+      offer:{price:999, off:80},
+    },
+    {
+      img: "https://rukminim2.flixcart.com/image/612/612/xif0q/screen-guard/tempered-glass/m/v/h/c331-nothing-original-imaggpsbmfnq738m.jpeg?q=70",
+      name: "Gorilla Cases Edge To Edge Tempered Glass for Nothing Phone 1",
+      rating: "4.3",
+      review: "59,439 Ratings & 5,827 Reviews",
+      spacefication: [
+        "6.4 Inch | Noting Phone 1",
+        "16.26 cm (6.4 inch) Full Sereen GG5",
+        "Edge to Edge | 100% Guarantee",
+        "Less scratch",
+        "1 Tempered Glass with Box",
+      ],
+      price:399,
+      offer:{price:1299, off:80},
+    },    
+  ];export const INSTA_CAMERA = [
+    {
+      img: "https://rukminim2.flixcart.com/image/312/312/kp2y2kw0/instant-camera/e/b/4/treasure-box-mini-9-instax-mini-9-fujifilm-original-imag3efxmxfrzggf.jpeg?q=70",
+      name: "FUJIFILM Instax Treasure Box Mini 9 Instant Camera",
+      rating: "4.3",
+      review: "1250 Ratings & 126 Reviews",
+      spacefication: [
+        "Exposure Mode: Automatic",
+        "View Finder: Yes",
+        "Self Timer: No",
+        "Battery Included",
+        "1 Year from Date of Purchase",
+      ],
+      price:5499,
+      offer:{price:5999, off:8},
+    },
+    {
+      img: "https://rukminim2.flixcart.com/image/312/312/kp2y2kw0/instant-camera/q/l/a/treasure-box-mini-9-instax-mini-9-fujifilm-original-imag3efxgamx5bna.jpeg?q=70",
+      name: "FUJIFILM Instax Treasure Box Mini 9 Instant Camera",
+      rating: "4.3",
+      review: "1250 Ratings & 126 Reviews",
+      spacefication: [
+        "Exposure Mode: Automatic",
+        "View Finder: Yes",
+        "Self Timer: No",
+        "Battery Included",
+        "1 Year from Date of Purchase",
+      ],
+      price:5499,
+      offer:{price:5999, off:8},
+    },
+
+  ];export const MOTOROLA_G73_5G = [
+    {
+      img: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/k/h/g73-5g-paux0023in-motorola-original-imagngjh7epkhqdg.jpeg?q=70",
+      name: "MOTOROLA g73 5G (Midnight Blue, 128 GB)",
+      rating: "3.9",
+      review: "17,943 Ratings & 2,266 Reviews",
+      spacefication: [
+        "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+        "50MP + 8MP | 16MP Front Camera",
+        "5000 mAh Battery",
+        "Mediatek Dimensity 930 Processor",
+        "1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories",
+      ],
+      price:16999,
+      offer:{price:21999, off:22},
+    },
+    {
+      img: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/p/l/g73-5g-paux0024in-motorola-original-imagngjhg3bjmazu.jpeg?q=70",
+      name: "MOTOROLA g73 5G (Lucent White, 128 GB)",
+      rating: "3.9",
+      review: "17,943 Ratings & 2,266 Reviews",
+      spacefication: [
+        "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+        "50MP + 8MP | 16MP Front Camera",
+        "5000 mAh Battery",
+        "Mediatek Dimensity 930 Processor",
+        "1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories",
+      ],
+      price:16999,
+      offer:{price:21999, off:22},
+    },
+    
   ];
