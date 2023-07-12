@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./conponents/RootLayout/RootLayout";
 import Home from "./conponents/Home/Home";
 import ShowProduct from "./conponents/ShowProduct/ShowProduct";
+import ProductPage from "./conponents/ProductPage/ProductPage";
 
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
           path: "/productShow",
           element: <ShowProduct />,
         },
+        {
+          path:"/productPage",
+          element:<ProductPage/>
+        }
       ],
     },
   ]);

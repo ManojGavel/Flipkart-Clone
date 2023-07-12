@@ -1,0 +1,41 @@
+.main{
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 3px;
+    border-radius: 2px;
+}
+.hoverImg{
+    height: 64px;
+    /* padding: 3px; */
+    width: 64px;
+
+}
+.hoverImg>img{
+    object-fit: contain;
+    width: inherit;
+    height: inherit;
+    padding: 3px;
+}
+.rating >svg{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.offers>li>svg{
+    font-size: 20px;
+    color: #13bd45;
+}
+.moreInfo:nth-child(1){
+    flex:0.2
+}
+.moreInfo:nth-child(2){
+    flex:0.8
+}
+.moreInfo:nth-child(2)>div{
+    width: 40%;
+    border-bottom: 2px solid;
+}
+.moreInfo:nth-child(2)>div>span>svg{
+    color: rgb(13, 91, 236);
+}

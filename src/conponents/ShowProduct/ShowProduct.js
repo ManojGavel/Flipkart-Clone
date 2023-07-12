@@ -3,12 +3,14 @@ import { useStateValue } from "../../context/Context";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
 import classes from "./showProduct.module.css";
 import StarIcon from "@mui/icons-material/Star";
+import { Link } from "react-router-dom";
 
 export default function ShowProduct() {
   const [status, dispatch] = useStateValue();
   console.log(status);
   return (
     <>
+        <Link to="/productPage">
       {status.showProduct.map((element) => {
         return (
           <div className="d-flex border m-2 bg-light p-3 align-items-center">
@@ -65,8 +67,10 @@ export default function ShowProduct() {
               </p>
             </div>
           </div>
-        );
-      })}
+          
+          );
+        })}
+        </Link>
     </>
   );
 }
