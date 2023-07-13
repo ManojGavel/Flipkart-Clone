@@ -27,6 +27,10 @@ const reducer = (state, action) => {
               return{
                 showProduct:[...MOTOROLA_G73_5G]
               }
+            case "productPage":
+              return{
+                showProduct:[action.prodyct]
+              }
             default:
               return state;
   }
