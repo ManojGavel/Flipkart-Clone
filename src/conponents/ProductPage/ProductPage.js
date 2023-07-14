@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./proudctPage.module.css";
 import StarIcon from "@mui/icons-material/Star";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
@@ -11,19 +11,34 @@ import { Button } from "@mui/material";
 import { AddShoppingCartOutlined } from "@mui/icons-material";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import { useStateValue } from "../../context/Context";
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductPage() {
+  const navigate = useNavigate();
+  const [pincode, setPincode] = useState("");
+  const isOpen = pincode.length > 5 ? false : true;
   const [status, dispatch] = useStateValue();
-  console.log(status);
-  // console.log(status.showProduct[0].img.replace("312/312","416/416"));
-  // console.log(status.showProduct[0].img)
-  const productImg = status.showProduct[0].img;
-  let smallImg = productImg.replace("312/312", "128/128");
-  let bigImg = productImg.replace("312/312", "416/416");
-  console.log(smallImg);
+  const [productRender, setProductRender] = useState([]);
+  const [smallImg, setSmallImg] = useState("");
+  const [bigImg, setBigImg] = useState("");
+  useEffect(() => {
+    setProductRender(status.showProduct);
+    let productImg = status.showProduct[0].img;
+    console.log(productImg);
+    let SmallImg = productImg.replace("312/312", "128/128");
+    setSmallImg(SmallImg);
+    let BigImg = productImg.replace("312/312", "416/416");
+    setBigImg(BigImg);
+  }, []);
+  useEffect(() => {
+    console.log(status.cartItems);
+  }, [status]);
+  const buyNow = () => {
+    navigate("/cart");
+  }
   return (
     <>
-      {status.showProduct.map((element) => {
+      {productRender.map((element) => {
         return (
           <section className={classes.main}>
             <div className="d-flex justify-content-around">
@@ -58,6 +73,21 @@ export default function ProductPage() {
                     <ul className="d-flex list-unstyled justify-content-between">
                       <li>
                         <Button
+                          onClick={() => {
+                            dispatch({
+                              type: "addToCart",
+                              item: {
+                                id: element.id,
+                                img: element.img,
+                                name: element.name,
+                                offer: element.offer,
+                                price: element.price,
+                                rating: element.rating,
+                                review: element.review,
+                                spacefication: element.spacefication,
+                              },
+                            });
+                          }}
                           sx={{
                             padding: "1rem 3rem",
                             backgroundColor: "#ff9f00",
@@ -73,6 +103,7 @@ export default function ProductPage() {
                       </li>
                       <li>
                         <Button
+                          onClick={buyNow}
                           sx={{
                             padding: "1rem 3rem",
                           }}
@@ -90,7 +121,7 @@ export default function ProductPage() {
               <div className="mx-2">
                 <h3 className="fs-5">{element.name}</h3>
                 <div>
-                  <p>
+                  <div>
                     {" "}
                     <span
                       className={`text-bg-success text-light small px-1 rounded-1 ${classes.rating}`}
@@ -107,7 +138,7 @@ export default function ProductPage() {
                         alt=""
                       />
                     </figure>
-                  </p>
+                  </div>
                   <p className="small text-success m-0">Spical Price</p>
                   <div className="">
                     <span className="fw-bold fs-3">
@@ -178,7 +209,7 @@ export default function ProductPage() {
                     </div>
                     <div className={classes.moreInfo}>
                       <Tooltip
-                        open
+                        open={isOpen}
                         arrow
                         placement="right"
                         title="Enter Pincode"
@@ -188,6 +219,9 @@ export default function ProductPage() {
                             <LocationOnIcon />
                           </span>
                           <input
+                            onChange={(e) => {
+                              setPincode(e.target.value);
+                            }}
                             type="text"
                             className="border-0 w-100"
                             placeholder="Enter Delivery Pincode"
@@ -228,8 +262,8 @@ export default function ProductPage() {
                       </div>
                       <div className={classes.moreInfo}>
                         <ul className={classes.ul}>
-                          {element.spacefication.map((element) => {
-                            return <li>{element}</li>;
+                          {element.spacefication.map((element, index) => {
+                            return <li key={index}>{element}</li>;
                           })}
                         </ul>
                       </div>

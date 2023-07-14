@@ -47,7 +47,7 @@ export default function Students() {
             <h3>Students Essentilas</h3>
             <div className="d-flex flex-wrap justify-content-around">
                 {dataArr.map((e)=>{
-                    return <div className={`card align-items-center ${classes.card}`}>
+                    return <div key={e.id} className={`card align-items-center ${classes.card}`}>
                     <img className={`mt-5 ${classes.img}`} width="150px" src={e.img} alt="products" />
                     <p className='m-0 mt-4 fs-5'>{e.name}</p>
                     <h3 className=' fs-6'>from <IndianCurrencyFormatter amount={e.price}/></h3>

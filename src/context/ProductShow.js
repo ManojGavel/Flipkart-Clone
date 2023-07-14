@@ -1,5 +1,6 @@
 export const iphone_14_iphone_14_plus = [
   {
+    id: (Math.random() * 1000000000).toFixed(),
     img: "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/u/f/-original-imaghxa5hvapbfds.jpeg?q=70",
     name: "APPLE iPhone 14 (Purple, 128 GB)",
     rating: "4.6",
@@ -15,6 +16,7 @@ export const iphone_14_iphone_14_plus = [
     offer:{price:79900, off:11},
   },
   {
+    id: (Math.random() * 1000000000).toFixed(),
     img: "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70",
     name: "APPLE iPhone 14 Plus (Starlight, 128 GB)",
     rating: "4.7",
@@ -32,6 +34,7 @@ export const iphone_14_iphone_14_plus = [
 ];
 export const SAMSUNG_Galaxy_S21_FE_5G = [
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/312/312/kzrbiq80/mobile/h/x/n/galaxy-s21-fe-5g-sm-g990ezaiinu-samsung-original-imagbpfzbrnueypq.jpeg?q=70",
       name: "SAMSUNG Galaxy S21 FE 5G (Graphite, 128 GB)",
       rating: "4.3",
@@ -47,6 +50,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
       offer:{price:47999, off:46},
     },
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/312/312/l30hmkw0/mobile/w/j/o/galaxy-s21-fe-5g-sm-g990ewziinu-samsung-original-image8dzwv3bch4k.jpeg?q=70",
       name: "SAMSUNG Galaxy S21 FE 5G (White, 256 GB)",
       rating: "4.3",
@@ -64,6 +68,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
   ];
   export const TEMPERED_GALSS = [
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/612/612/xif0q/screen-guard/edge-to-edge-tempered-glass/5/t/b/gsaug02-gorilla-cases-original-imaghkdfngmybbsg.jpeg?q=70",
       name: "Gorilla Cases Edge To Edge Tempered Glass for Nothing Phone 1",
       rating: "3.3",
@@ -79,6 +84,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
       offer:{price:999, off:80},
     },
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/612/612/xif0q/screen-guard/tempered-glass/m/v/h/c331-nothing-original-imaggpsbmfnq738m.jpeg?q=70",
       name: "Gorilla Cases Edge To Edge Tempered Glass for Nothing Phone 1",
       rating: "4.3",
@@ -95,6 +101,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
     },    
   ];export const INSTA_CAMERA = [
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/312/312/kp2y2kw0/instant-camera/e/b/4/treasure-box-mini-9-instax-mini-9-fujifilm-original-imag3efxmxfrzggf.jpeg?q=70",
       name: "FUJIFILM Instax Treasure Box Mini 9 Instant Camera",
       rating: "4.3",
@@ -110,6 +117,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
       offer:{price:5999, off:8},
     },
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/312/312/kp2y2kw0/instant-camera/q/l/a/treasure-box-mini-9-instax-mini-9-fujifilm-original-imag3efxgamx5bna.jpeg?q=70",
       name: "FUJIFILM Instax Treasure Box Mini 9 Instant Camera",
       rating: "4.3",
@@ -127,6 +135,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
 
   ];export const MOTOROLA_G73_5G = [
     {
+      id: (Math.random() * 1000000000).toFixed(), 
       img: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/k/h/g73-5g-paux0023in-motorola-original-imagngjh7epkhqdg.jpeg?q=70",
       name: "MOTOROLA g73 5G (Midnight Blue, 128 GB)",
       rating: "3.9",
@@ -142,6 +151,7 @@ export const SAMSUNG_Galaxy_S21_FE_5G = [
       offer:{price:21999, off:22},
     },
     {
+      id: (Math.random() * 1000000000).toFixed(),
       img: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/p/l/g73-5g-paux0024in-motorola-original-imagngjhg3bjmazu.jpeg?q=70",
       name: "MOTOROLA g73 5G (Lucent White, 128 GB)",
       rating: "3.9",

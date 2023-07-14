@@ -11,12 +11,22 @@ import {
 import classes from "./header.module.css";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
+import { useStateValue } from "../../context/Context";
+import { useNavigate } from "react-router-dom"; 
+
 export default function Header(props) {
+  const [state,dispatch]= useStateValue()
   const [mouseEnter, setMouseEnter] = useState(false);
   const signInMouseEnterHandle = () => {
     console.log(mouseEnter);
     setMouseEnter(true);
   };
+const navigate = useNavigate()
+  const cartClickHandelr = () => {
+    console.log("clicked to cart");
+    navigate("/cart")
+  }
+
   return (
     <header className={classes.header}>
       <nav className="navbar navbar-expend-lg bg-body-tertiary">
@@ -90,10 +100,10 @@ export default function Header(props) {
                   {!mouseEnter ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
                 </span>
               </button>
-              <div>
+              <div onClick={cartClickHandelr}>
                 <span>
-                  <Badge badgeContent={0} color="primary">
-                    <ShoppingCartOutlinedIcon/>
+                  <Badge badgeContent={state.cartItems?.length} color="primary">
+                    <ShoppingCartOutlinedIcon />
                   </Badge>
                 </span>
                 <span>Cart</span>

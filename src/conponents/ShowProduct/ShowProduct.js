@@ -7,16 +7,17 @@ import { Link } from "react-router-dom";
 
 export default function ShowProduct() {
   const [status, dispatch] = useStateValue();
-  console.log(status);
+  // console.log(status);
   return (
     <>
-      {status.showProduct.map((element) => {
+      {status.showProduct.map((element,index) => {
         return (
-          <Link
+          <Link key={element.index} 
             onClick={() =>
               dispatch({
                 type: "productPage",
                 prodyct: {
+                  id: element.id,
                   img: element.img,
                   name: element.name,
                   offer: element.offer,
@@ -51,8 +52,8 @@ export default function ShowProduct() {
                 </p>
 
                 <ul className={classes.ul}>
-                  {element.spacefication.map((element) => {
-                    return <li>{element}</li>;
+                  {element.spacefication.map((element,index) => {
+                    return <li key={index}>{element}</li>;
                   })}
                 </ul>
               </div>

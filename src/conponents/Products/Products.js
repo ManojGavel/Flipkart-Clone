@@ -59,7 +59,7 @@ export default function Products() {
             <div>
               <div className="card-body d-flex justify-content-around">
                 {porducts.map((element) => (
-                  <Link key={element.id} onClick={()=>dispatch({type: element.name})} to="/productShow">
+                  <Link key={element.id} className="text-decoration-none" onClick={()=>dispatch({type: element.name})} to="/productShow">
                   <div
                     key={element.id}
                     className="card"

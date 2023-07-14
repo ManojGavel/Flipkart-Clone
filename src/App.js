@@ -6,6 +6,7 @@ import RootLayout from "./conponents/RootLayout/RootLayout";
 import Home from "./conponents/Home/Home";
 import ShowProduct from "./conponents/ShowProduct/ShowProduct";
 import ProductPage from "./conponents/ProductPage/ProductPage";
+import Cart from "./conponents/Cart/Cart";
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
         {
           path:"/productPage",
           element:<ProductPage/>
+        },
+        {
+          path: "/cart",
+          element:<Cart/>
         }
       ],
     },
