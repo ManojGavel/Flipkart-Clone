@@ -1,0 +1,9 @@
+.emptyCart{
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    display: grid;
+    place-content: center;
+    height: 70%;
+    text-align: center;
+}
