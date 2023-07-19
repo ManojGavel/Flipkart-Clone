@@ -1,0 +1,36 @@
+.checkout{
+    margin: 0 auto;
+    width: 60vw;
+    /* display: flex; */
+    margin-top: 1%;
+}
+.checkout>div:nth-child(1){
+    /* flex: 0.7; */
+    /* background-color: #fff; */
+    margin: 5px;
+    /* padding: 10px; */
+    border-radius: 3px;
+}
+.checkout>div:nth-child(2){
+    /* flex: 0.3; */
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.homeAddress{
+    font-size: 10px;
+    margin: 3px;
+    padding: 3px;
+    background-color: #f5faff;
+    border-radius: 3px;
+    color: gray;
+}
+.id{
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+.address{
+    background-color: #fff;
+    margin-bottom: 3px;
+}

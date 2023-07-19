@@ -22,7 +22,7 @@
   border-radius: 3px;
   margin-left: 5px;
 }
-.items{
+.items {
   height: 650px;
   overflow-y: scroll;
 }
@@ -47,9 +47,9 @@
   width: 120px;
   padding: 5px;
   margin: 10px;
-  background-blend-mode:overlay
+  background-blend-mode: overlay;
 }
-.custom-button{
+.custom-button {
   background-color: #fff;
   border: 1px solid #fff;
 }
@@ -61,19 +61,38 @@
   /* margin: 0; */
   /* border: 1px solid #000; */
 }
-.priceingDetils>div:last-child{
+.priceingDetils > div:last-child {
   /* border-style: dashed;
   border-bottom:  3px; */
   border-bottom-style: dashed !important;
 }
-.orderPlaceSection{
+.orderPlaceSection {
   position: sticky;
   position: -webkit-sticky;
   bottom: -10px;
   background-color: #fff;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
-.orderPlaceSection>button{
+.orderPlaceSection > button {
   position: relative;
   left: 70%;
+}
+.quantityBtn {
+  font-size: 16px;
+  border-radius: 50%;
+  padding-top: 1px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(#fff, #f9f9f9);
+  display: inline-block;
+  border: 1px solid #c2c2c2;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(#fff, #f9f9f9);
+  display: inline-block;
+  border: 1px solid #c2c2c2;
+  padding-bottom: 4px;
 }

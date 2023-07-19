@@ -24,18 +24,16 @@ export default function ProductPage() {
   useEffect(() => {
     setProductRender(status.showProduct);
     let productImg = status.showProduct[0].img;
-    console.log(productImg);
+    // console.log(productImg);
     let SmallImg = productImg.replace("312/312", "128/128");
     setSmallImg(SmallImg);
     let BigImg = productImg.replace("312/312", "416/416");
     setBigImg(BigImg);
   }, []);
   useEffect(() => {
-    console.log(status.cartItems);
+    // console.log(status.cartItems);
   }, [status]);
-  const buyNow = () => {
-    navigate("/cart");
-  }
+  
   return (
     <>
       {productRender.map((element) => {
@@ -85,6 +83,7 @@ export default function ProductPage() {
                                 rating: element.rating,
                                 review: element.review,
                                 spacefication: element.spacefication,
+                                quantity: 1,
                               },
                             });
                           }}
@@ -103,7 +102,22 @@ export default function ProductPage() {
                       </li>
                       <li>
                         <Button
-                          onClick={buyNow}
+                          onClick={() => {
+                            navigate("/cart");
+                            dispatch({
+                              type: "addToCart",
+                              item: {
+                                id: element.id,
+                                img: element.img,
+                                name: element.name,
+                                offer: element.offer,
+                                price: element.price,
+                                rating: element.rating,
+                                review: element.review,
+                                spacefication: element.spacefication,
+                                quantity: 1,
+                              },
+                            })}}
                           sx={{
                             padding: "1rem 3rem",
                           }}

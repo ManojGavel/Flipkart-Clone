@@ -23,9 +23,10 @@ export default function Cart() {
     });
     setPrice(priceArr.reduce((a, b) => a + b, 0));
     setDiscount(discountReducedArr1 - priceArr.reduce((a, b) => a + b, 0));
-  }, []);
+  }, [state]);
   console.log(state);
   console.log(state.cartItems);
+  
   return (
     <div className={classes.cart}>
       <div className={classes.items}>
@@ -46,6 +47,11 @@ export default function Cart() {
             <div className={`${classes.item} rounded-1 mt-1`}>
               <div>
                 <img src={element.img} alt="" />
+                <div className="d-flex align-items-center justify-content-evenly">
+                  <div>  <button  disabled={element.quantity===1} className={classes.quantityBtn} onClick={()=>dispatch({type:"removeFromCart" ,id:element.id})}>-</button></div>
+                  <div className="w-25"><input className="w-100 text-center" value={element.quantity} type="text" /></div>
+                  <div ><button className={classes.quantityBtn} onClick={()=>{dispatch({type:'addToCart', item:element});console.log(element)}}>+</button></div>
+                </div>
               </div>
               <div>
                 <h3 className="fs-6 fw-semibold m-0">{element.name}</h3>
@@ -86,7 +92,7 @@ export default function Cart() {
                     </button>
                   </div>
                   <div>
-                    <button
+                    <button onClick={()=>dispatch({type:"removeAllFromCart", id:element.id})}
                       id={element.id}
                       className={`btn btn-lg btn-light ${classes["custom-button"]}`}
                     >
@@ -143,7 +149,7 @@ export default function Cart() {
             <div className="d-flex justify-content-between mb-4">
               <div>Discount</div>
               <div className="text-success">
-                -<IndianCurrencyFormatter amount={discount} />
+                <IndianCurrencyFormatter amount={discount} />
               </div>
             </div>
             <div

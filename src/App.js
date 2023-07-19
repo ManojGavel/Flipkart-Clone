@@ -7,6 +7,7 @@ import Home from "./conponents/Home/Home";
 import ShowProduct from "./conponents/ShowProduct/ShowProduct";
 import ProductPage from "./conponents/ProductPage/ProductPage";
 import Cart from "./conponents/Cart/Cart";
+import Checkout from "./conponents/Checkout/Checkout";
 
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         {
           path: "/cart",
           element:<Cart/>
+        },
+        {
+          path: "/checkout",
+          element:<Checkout/>
         }
       ],
     },
