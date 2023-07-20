@@ -1,6 +1,9 @@
 import React from "react";
 import classes from "./modal.module.css";
 import ReactDOM from "react-dom"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+
 const Backdrop = (props) => {
   return( <div className={classes.modal} onClick={props.onConfirm} />)
 };
@@ -12,7 +15,7 @@ const Overlay = () => {
       height="50px"
       alt=""
     />
-    <div className="card-body">
+    <form className="card-body">
       <div>
         <label className="form-label" htmlFor="email">
           Email
@@ -34,7 +37,7 @@ const Overlay = () => {
         </p>
         <button className="btn btn-outline-secondary ">Sign up</button>
       </div>
-    </div>
+    </form>
   </form>)
 };
 export default function Modal(props) {
