@@ -2,8 +2,7 @@ import React from "react";
 import classes from "./product.module.css";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
 import { Link } from "react-router-dom";
-import {useStateValue} from "../../context/Context";
-
+import { useStateValue } from "../../context/Context";
 
 export default function Products() {
   const porducts = [
@@ -49,38 +48,44 @@ export default function Products() {
     },
   ];
 
- const [state,dispatch]= useStateValue()
+  const [state, dispatch] = useStateValue();
   return (
     <section className="mx-3">
       <div className="d-flex">
-        <div className={`card my-3 ${classes.products_ch1}`}>
+        <div className={`card my-3 ${classes.products_ch1} overflow-scroll`}>
           <h3 className="ms-3 fs-4 mt-3">Top Offers</h3>
           <div>
             <div>
               <div className="card-body d-flex justify-content-around">
                 {porducts.map((element) => (
-                  <Link key={element.id} className="text-decoration-none" onClick={()=>dispatch({type: element.name})} to="/productShow">
-                  <div
+                  <Link
                     key={element.id}
-                    className="card"
-                    style={{ width: "235px" }}
+                    className="text-decoration-none"
+                    onClick={() => dispatch({ type: element.name })}
+                    to="/productShow"
                   >
-                    <div className=" text-center">
-                      <div style={{ height: "150px" }}>
-                        <img
-                          className={`img-rounder mt-5 m-3 w-50`}
-                          src={element.image}
-                          alt="procuct"
-                        />
+                    <div
+                      key={element.id}
+                      className="card"
+                      style={{ width: "235px" }}
+                    >
+                      <div className=" text-center">
+                        <div style={{ height: "150px" }}>
+                          <img
+                            className={`img-rounder mt-5 m-3 w-50`}
+                            src={element.image}
+                            alt="procuct"
+                          />
+                        </div>
+                        <p className="lead m-0 mt-5 text-body-secondary">
+                          {element.name}
+                        </p>
+                        <p className="font-weight-bold fs-6 m-0">
+                          from{" "}
+                          <IndianCurrencyFormatter amount={element.price} />
+                        </p>
                       </div>
-                      <p className="lead m-0 mt-5 text-body-secondary">
-                        {element.name}
-                      </p>
-                      <p className="font-weight-bold fs-6 m-0">
-                        from <IndianCurrencyFormatter amount={element.price} />
-                      </p>
                     </div>
-                  </div>
                   </Link>
                 ))}
               </div>
@@ -88,7 +93,8 @@ export default function Products() {
           </div>
         </div>
         <div className={`my-3 mx-2 ${classes.products_ch2} `}>
-          <img className="rounded"
+          <img
+            className="rounded"
             src="https://rukminim1.flixcart.com/www/270/410/promos/28/06/2023/a1558b63-9717-4f16-acd7-9c26aafd31b7.jpg?q=80"
             alt=""
           />
