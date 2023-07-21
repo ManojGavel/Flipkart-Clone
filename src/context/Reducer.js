@@ -9,31 +9,37 @@ import {
 export const initialState = {
   showProduct: [],
   cartItems: [],
+  user:null
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "Iphone 14/14plus":
+      localStorage.setItem("productShow", JSON.stringify([...iphone_14_iphone_14_plus]));
       return {
         ...state,
         showProduct: [...iphone_14_iphone_14_plus],
       };
     case "Samsung s21 FE":
+      localStorage.setItem("productShow", JSON.stringify([...SAMSUNG_Galaxy_S21_FE_5G]));
       return {
         ...state,
         showProduct: [...SAMSUNG_Galaxy_S21_FE_5G],
       };
     case "Tempered Galss":
+      localStorage.setItem("productShow", JSON.stringify([...TEMPERED_GALSS]));
       return {
         ...state,
         showProduct: [...TEMPERED_GALSS],
       };
     case "Insta camera":
+      localStorage.setItem("productShow", JSON.stringify([...INSTA_CAMERA]));
       return {
         ...state,
         showProduct: [...INSTA_CAMERA],
       };
     case "Moto g73":
+      localStorage.setItem("productShow", JSON.stringify([...MOTOROLA_G73_5G]));
       return {
         ...state,
         showProduct: [...MOTOROLA_G73_5G],
@@ -44,7 +50,7 @@ const reducer = (state, action) => {
         showProduct: [action.prodyct],
       };
     case "addToCart":
-      const existingCartItemIndex = state.cartItems.findIndex(
+      const existingCartItemIndex = state.cartItems?.findIndex(
         (cartItem) => cartItem.id === action.item.id
       );
       console.log(existingCartItemIndex);
@@ -67,6 +73,7 @@ const reducer = (state, action) => {
         };
         updatedCartItems = [...state.cartItems];
         updatedCartItems[existingCartItemIndex] = updatedCartItem;
+        localStorage.setItem("cart", JSON.stringify(updatedCartItems));
         console.log(updatedCartItem);
       } else {
         updatedCartItems = state.cartItems.concat(action.item);
@@ -102,6 +109,7 @@ const reducer = (state, action) => {
         };
         updatedCartItems1 = [...state.cartItems];
         updatedCartItems1[existingCartItemIndex1] = updatedCartItem1;
+        localStorage.setItem("cart", JSON.stringify(updatedCartItems1));
       }
       return {
         ...state,
@@ -111,10 +119,26 @@ const reducer = (state, action) => {
       const filteredItemArr = state.cartItems.filter(
         (cartItem) => !(cartItem.id === action.id)
       );
+      localStorage.setItem("cart", JSON.stringify(filteredItemArr));
       return {
         ...state,
         cartItems: filteredItemArr,
       };
+      case "SET_USER":
+        return{
+          ...state,
+          user:action.user
+        }
+      case "cart":
+        return{
+          ...state,
+          cartItems:action.cartItems
+        }
+      case "productShow":
+        return{
+          ...state,
+          showProduct:action.productShow
+        }
     default:
       return state;
   }

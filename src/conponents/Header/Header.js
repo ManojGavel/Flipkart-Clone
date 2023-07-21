@@ -2,30 +2,28 @@ import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import {
-  KeyboardArrowDown,
-  KeyboardArrowUp,
   PersonOutline,
 } from "@mui/icons-material";
 import classes from "./header.module.css";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
 import { useStateValue } from "../../context/Context";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../fireBase/Firebase";
 
 export default function Header(props) {
-  const [state,dispatch]= useStateValue()
-  const [mouseEnter, setMouseEnter] = useState(false);
-  const signInMouseEnterHandle = () => {
-    console.log(mouseEnter);
-    setMouseEnter(true);
-  };
-const navigate = useNavigate()
+  const [state, dispatch] = useStateValue();
+
+  const userMail = state.user?.email.split("@");
+  
+  const navigate = useNavigate();
   const cartClickHandelr = () => {
     console.log("clicked to cart");
-    navigate("/cart")
-  }
+    navigate("/cart");
+  };
 
   return (
     <header className={classes.header}>
@@ -72,33 +70,33 @@ const navigate = useNavigate()
                 </span>
                 <span>Become a Seller</span>
               </div>
-              <button
-                className={`${classes.signin} btn btn-light`}
-                onMouseOut={() => {
-                  setMouseEnter(false);
-                }}
-                onMouseEnter={signInMouseEnterHandle}
-              >
+              <button className={`${classes.signin} btn btn-light`}>
                 <span
-                  onMouseOut={() => {
-                    setMouseEnter(false);
+                  onClick={() => {
+                    !state.user &&
+                      props.setModalIsVisible((preValue) => !preValue);
+                    state.user &&
+                      signOut(auth)
+                        .then(() => {
+                          console.log("signout successfully");
+                        })
+                        .catch((error) => {
+                          alert(error.message);
+                        });
                   }}
-                  onMouseEnter={signInMouseEnterHandle}
                 >
-                  <PersonOutline />
+                  <PersonOutline
+                    sx={{
+                      fontSize: "20px",
+                    }}
+                  />
+                  {state.user ? userMail[0] : "Guest"}{" "}
                 </span>
-                <span
-                  onMouseOut={() => {
-                    setMouseEnter(false);
-                  }}
-                  onClick={() =>
-                    props.setModalIsVisible((preValue) => !preValue)
-                  }
-                  onMouseEnter={signInMouseEnterHandle}
-                >
-                  Sign in{" "}
-                  {!mouseEnter ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
-                </span>
+                <div>
+                  <span style={{ fontSize: "12px" }}>
+                    {state.user ? "sign Out" : "Sign In"}
+                  </span>
+                </div>
               </button>
               <div onClick={cartClickHandelr}>
                 <span>

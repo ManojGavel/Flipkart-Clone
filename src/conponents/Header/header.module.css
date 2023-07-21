@@ -30,21 +30,45 @@ nav > div {
 .figure {
   line-height: 7px;
 }
+.signin {
+  line-height: 0;
+  text-align: center;
+  /* padding-bottom: 3px;
+  margin-bottom: 3px; */
+  padding: 7px;
+  /* padding: 4px 0px; */
+}
 .signin:hover {
   background-color: #2a55e5;
   transition: ease-in 300ms;
+  /* padding-bottom: 3px;
+  margin-bottom: 3px; */
+  color: yellow;
 }
-.signin:hover>span {
-    color: white;
-    
+.signin:hover > span {
+  /* color: white; */
 }
-.searchFrom{
+.signin:hover > div {
+  color: yellow;
+  /* padding-bottom: 3px;
+  margin-bottom: 3px; */
+}
+.signin:hover > div > span {
+  /* color: white; */
+  /* padding-bottom: 3px;
+  margin-bottom: 3px; */
+}
+.signin > div > span {
+  font-size: 10px;
+  padding-left: 43px;
+}
+.searchFrom {
   background-color: #f0f5ff;
 }
-.searchFrom input{
-background-color: #f0f5ff;
+.searchFrom input {
+  background-color: #f0f5ff;
 }
-.header{
+.header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
