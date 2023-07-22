@@ -21,13 +21,13 @@ export default function ProductPage() {
   const [productRender, setProductRender] = useState([]);
   const [smallImg, setSmallImg] = useState("");
   const [bigImg, setBigImg] = useState("");
-  useEffect(() => {
+   useEffect(() => {
     setProductRender(status.showProduct);
-    let productImg = status.showProduct[0].img;
+    let productImg = status.showProduct[0]?.img;
     // console.log(productImg);
-    let SmallImg = productImg.replace("312/312", "128/128");
+    let SmallImg = productImg?.replace("312/312", "128/128");
     setSmallImg(SmallImg);
-    let BigImg = productImg.replace("312/312", "416/416");
+    let BigImg = productImg?.replace("312/312", "416/416");
     setBigImg(BigImg);
   }, []);
   useEffect(() => {
@@ -36,9 +36,9 @@ export default function ProductPage() {
   
   return (
     <>
-      {productRender.map((element) => {
+      {productRender.map((element,index) => {
         return (
-          <section className={classes.main}>
+          <section key={index} className={classes.main}>
             <div className="d-flex justify-content-around">
               <div className="d-flex mx-2 p-2 justify-content-center text-center">
                 <div>
@@ -62,8 +62,7 @@ export default function ProductPage() {
                 <div>
                   <img
                     className={`${classes.bigImg} border rounded-1 p-2`}
-                    height="416px"
-                    width="416px"
+                    
                     src={bigImg}
                     alt=""
                   />
@@ -133,7 +132,7 @@ export default function ProductPage() {
                 </div>
               </div>
               <div className="mx-2">
-                <h3 className="fs-5">{element.name}</h3>
+                <h3 className={`${classes.name} fs-5`}>{element.name}</h3>
                 <div>
                   <div>
                     {" "}
@@ -154,7 +153,7 @@ export default function ProductPage() {
                     </figure>
                   </div>
                   <p className="small text-success m-0">Spical Price</p>
-                  <div className="">
+                  <div className={classes.price}>
                     <span className="fw-bold fs-3">
                       <IndianCurrencyFormatter amount={element.price} />{" "}
                     </span>

@@ -96,3 +96,15 @@
   border: 1px solid #c2c2c2;
   padding-bottom: 4px;
 }
+@media screen and (max-width: 600px) {
+  .cart {
+    flex-direction: column-reverse;
+  }
+  .item{
+    flex-direction: column;
+  }
+  .item>div>img{
+    display: block;
+    margin: auto;
+  }
+}

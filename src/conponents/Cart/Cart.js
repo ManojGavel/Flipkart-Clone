@@ -44,9 +44,9 @@ export default function Cart() {
           </div>
         </div>
        {state.cartItems.length===0&& <EmptyCart />}
-        {state.cartItems?.map((element) => {
+        {state.cartItems?.map((element,index) => {
           return (
-            <div className={`${classes.item} rounded-1 mt-1`}>
+            <div key={index} className={`${classes.item} rounded-1 mt-1`}>
               <div>
                 <img src={element.img} alt="" />
                 <div className="d-flex align-items-center justify-content-evenly">

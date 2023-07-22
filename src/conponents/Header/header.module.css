@@ -81,10 +81,25 @@ nav > div {
 
 @media screen and (max-width: 600px) {
   .nav1 {
-    display: none !important;
+    /* display: none !important; */
   }
   .nav2 {
     background-color: #fff;
     display: block !important;
+  }
+  .nav1Search{
+    display: none;
+  }
+  .seller{
+    display: none;
+  }
+  .signInName{
+    display: none;
+  }
+  .Badge.MuiBadge-badge{
+    min-width: 1px !important;
+    line-height: 0 !important;
+    padding: 0 3px !important;
+    height: 11px !important;
   }
 }

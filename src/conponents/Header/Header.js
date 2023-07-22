@@ -48,7 +48,7 @@ export default function Header(props) {
                   </span>
                 </figure>
               </Link>
-              <div className="w-100">
+              <div className={`w-100 ${classes.nav1Search}`}>
                 <form
                   className={`w-100 ms-3 d-flex border p-1 mt-2 rounded-1 ${classes.searchFrom}`}
                 >
@@ -68,7 +68,7 @@ export default function Header(props) {
                 <span>
                   <StorefrontIcon />
                 </span>
-                <span>Become a Seller</span>
+                <span className={classes.seller}>Become a Seller</span>
               </div>
               <button className={`${classes.signin} btn btn-light`}>
                 <span
@@ -92,7 +92,7 @@ export default function Header(props) {
                   />
                   {state.user ? userMail[0] : "Guest"}{" "}
                 </span>
-                <div>
+                <div className={classes.signInName}>
                   <span style={{ fontSize: "12px" }}>
                     {state.user ? "sign Out" : "Sign In"}
                   </span>
@@ -100,7 +100,7 @@ export default function Header(props) {
               </button>
               <div onClick={cartClickHandelr}>
                 <span>
-                  <Badge badgeContent={state.cartItems?.length} color="primary">
+                  <Badge badgeContent={state.cartItems?.length} className={classes.Badge} color="primary">
                     <ShoppingCartOutlinedIcon />
                   </Badge>
                 </span>

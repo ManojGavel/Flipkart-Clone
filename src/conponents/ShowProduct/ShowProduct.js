@@ -10,9 +10,10 @@ export default function ShowProduct() {
   // console.log(status);
   return (
     <>
-      {status.showProduct.map((element,index) => {
+      {status.showProduct.map((element, index) => {
         return (
-          <Link key={element.index} 
+          <Link
+            key={element.index}
             onClick={() =>
               dispatch({
                 type: "productPage",
@@ -31,7 +32,7 @@ export default function ShowProduct() {
             className="text-decoration-none text-dark"
             to="/productPage"
           >
-            <div className="d-flex border m-2 bg-light p-3 align-items-center">
+            <div className="row border m-2 bg-light p-3 align-items-center">
               <img
                 className={classes.img}
                 height="160px"
@@ -52,7 +53,7 @@ export default function ShowProduct() {
                 </p>
 
                 <ul className={classes.ul}>
-                  {element.spacefication.map((element,index) => {
+                  {element.spacefication.map((element, index) => {
                     return <li key={index}>{element}</li>;
                   })}
                 </ul>
