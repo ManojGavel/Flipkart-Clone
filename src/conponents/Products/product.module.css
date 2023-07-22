@@ -1,8 +1,11 @@
-.img{
-    width: 15%;
+.image{
+    width: 40%;
     aspect-ratio: 4/3;
     object-fit: contain;
     /* mix-blend-mode: color-burn;   */
+}
+.imgDiv{
+    height: "150px";
 }
 .products_ch1{
     flex: .9;
@@ -10,3 +13,46 @@
 .products_ch2{
     flex: .1;
 }
+@media screen and (max-width: 600px) {
+    .products_ch1{
+        flex: 1;
+    }
+    .products_ch2{
+        display: none;
+    }
+}
+    
+.card{
+    width: 235px;
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        height: 100%;
+        width: 30vw;
+    }
+    .card>div{
+        height:inherit
+    }
+    .imgDiv{
+        /* width: 30%;
+        height: auto; */
+    }
+    /* .image{
+        width: 100%;
+        aspect-ratio: 0;
+        height: auto;
+    } */
+    .link{
+        width: 30vw;
+        margin: 0px 7px;
+    }
+    .name{
+        margin-top: 5px !important;
+        font-size: 12px !important;
+    }
+    .name~p{
+        font-size: 12px !important;
+    }
+}
+    

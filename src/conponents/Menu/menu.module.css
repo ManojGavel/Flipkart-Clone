@@ -1,0 +1,9 @@
+.options>img{
+    mix-blend-mode: darken;
+}
+
+@media screen and (max-width: 600px) {
+    .options{
+        margin: 0px 20px;
+    }
+}

@@ -38,7 +38,7 @@ export default function MultipleSectioins() {
     
   ];
   return (
-    <div className="d-flex">
+    <div className={`d-flex ${classes.multipleSectioins}`}>
       
       <section className="ms-3 me-1" >
         <div className="">
@@ -114,7 +114,7 @@ export default function MultipleSectioins() {
           </div>
         </div>
       </section>
-      <section className="me-3 ms-1">
+      <section className={`me-3 ms-1 ${classes.flex}`}>
         <img height="625px"  src="https://rukminim1.flixcart.com/www/530/750/promos/22/05/2023/44d98c6b-16de-4759-a3c4-9d6412ad8bfa.jpg?q=80" alt="" />
       </section>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./offers.module.css";
 export default function Offers() {
   const dataArr = [
     {
@@ -31,7 +31,7 @@ export default function Offers() {
     <div className="d-flex flex-wrap m-3 justify-content-around">
       {dataArr.map((e) => {
         return<div key={e.id} className="my-2">
-          <img width="493px"  height="264px" src={e.img} alt="offer" />
+          <img  className={classes.img}   src={e.img} alt="offer" />
         </div>;
       })}
     </div>

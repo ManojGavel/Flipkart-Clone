@@ -6,6 +6,7 @@
   width: 100px;
   height: 27px;
 }
+
 nav > div {
   width: 90%;
   margin: 0 auto;
@@ -73,4 +74,17 @@ nav > div {
   position: sticky;
   top: 0px;
   z-index: 9999999;
+}
+.nav2 {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav1 {
+    display: none !important;
+  }
+  .nav2 {
+    background-color: #fff;
+    display: block !important;
+  }
 }

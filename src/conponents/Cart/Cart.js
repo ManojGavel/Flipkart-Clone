@@ -4,8 +4,10 @@ import { useStateValue } from "../../context/Context";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
 import { Button } from "@mui/material";
 import EmptyCart from "./EmptyCart";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
+  const navigate = useNavigate();
   const [state, dispatch] = useStateValue();
   const [price, setPrice] = React.useState();
   const [discount, setDiscount] = React.useState(0);
@@ -127,6 +129,7 @@ export default function Cart() {
             }}
             size="lg"
             variant={"solid"}
+            onClick={() =>{   ; console.log("clicked to buy now")}}
           >
             Buy Now
           </Button>{" "}

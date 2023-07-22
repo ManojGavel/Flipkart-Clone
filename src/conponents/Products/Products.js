@@ -52,7 +52,7 @@ export default function Products() {
   return (
     <section className="mx-3">
       <div className="d-flex">
-        <div className={`card my-3 ${classes.products_ch1} overflow-scroll`}>
+        <div className={`card my-3 ${classes.products_ch1} overflow-x-scroll`}>
           <h3 className="ms-3 fs-4 mt-3">Top Offers</h3>
           <div>
             <div>
@@ -60,24 +60,24 @@ export default function Products() {
                 {porducts.map((element) => (
                   <Link
                     key={element.id}
-                    className="text-decoration-none"
+                    className={`text-decoration-none ${classes.link}`}
                     onClick={() => dispatch({ type: element.name })}
                     to="/productShow"
                   >
                     <div
                       key={element.id}
-                      className="card"
-                      style={{ width: "235px" }}
+                      className={`card ${classes.card}`}
+                      
                     >
                       <div className=" text-center">
-                        <div style={{ height: "150px" }}>
+                        <div className={classes.imgDiv} >
                           <img
-                            className={`img-rounder mt-5 m-3 w-50`}
+                            className={`img-rounder mt-5 m-3 w-50 ${classes.image}`}
                             src={element.image}
                             alt="procuct"
                           />
                         </div>
-                        <p className="lead m-0 mt-5 text-body-secondary">
+                        <p className={`lead m-0 mt-5 text-body-secondary ${classes.name}`}>
                           {element.name}
                         </p>
                         <p className="font-weight-bold fs-6 m-0">
