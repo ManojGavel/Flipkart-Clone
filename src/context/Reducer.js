@@ -45,6 +45,7 @@ const reducer = (state, action) => {
         showProduct: [...MOTOROLA_G73_5G],
       };
     case "productPage":
+      localStorage.setItem("productPage", JSON.stringify([action.prodyct, ...state.showProduct]));
       return {
         ...state,
         showProduct: [action.prodyct],
@@ -135,9 +136,15 @@ const reducer = (state, action) => {
           cartItems:action.cartItems
         }
       case "productShow":
+        console.log(action.productShow)
         return{
           ...state,
-          showProduct:action.productShow
+          showProduct: [...action.productShow],
+        }
+      case "productPageFromLocalStorage":
+        return{
+          ...state,
+          showProduct:action.product
         }
     default:
       return state;

@@ -25,11 +25,19 @@ function App() {
       });
     }
     const productShow = JSON.parse(localStorage.getItem("productShow"));
+    console.log(productShow)
     if (productShow) {
       dispatch({
         type: "productShow",
         productShow: productShow,
       });
+    }
+    const productPageItems = JSON.parse(localStorage.getItem("productPage"));
+    if(productPageItems){
+      dispatch({
+        type:"productPageFromLocalStorage",
+        product:productPageItems
+      })
     }
     onAuthStateChanged(auth, (user) => {
       if (user) {

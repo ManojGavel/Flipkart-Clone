@@ -87,7 +87,7 @@ export default function ProductPage() {
                             });
                           }}
                           sx={{
-                            padding: "1rem 3rem",
+                            // padding: "1rem 3rem",
                             backgroundColor: "#ff9f00",
                             "&:hover": {
                               backgroundColor: "#ecb150", // Change to your desired hover color
@@ -118,7 +118,7 @@ export default function ProductPage() {
                               },
                             })}}
                           sx={{
-                            padding: "1rem 3rem",
+                            // padding: "1rem 3rem",
                           }}
                           variant="contained"
                           color="warning"

@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 export default function ShowProduct() {
   const [status, dispatch] = useStateValue();
-  // console.log(status);
+  console.log(status);
   return (
     <>
       {status.showProduct.map((element, index) => {
         return (
           <Link
-            key={element.index}
+            key={index}
             onClick={() =>
               dispatch({
                 type: "productPage",
@@ -36,8 +36,8 @@ export default function ShowProduct() {
               <img
                 className={classes.img}
                 height="160px"
-                src={element.img}
-                alt={element.name}
+                src={element?.img}
+                alt={element?.name}
               />
               <div className={classes.info}>
                 <h3 className="fs-4">{element.name} </h3>
