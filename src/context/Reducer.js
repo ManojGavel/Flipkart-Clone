@@ -14,7 +14,7 @@ export const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "Iphone 14/14plus":
+    case "Iphone14_14plus":
       localStorage.setItem("productShow", JSON.stringify([...iphone_14_iphone_14_plus]));
       return {
         ...state,
@@ -144,7 +144,7 @@ const reducer = (state, action) => {
       case "productPageFromLocalStorage":
         return{
           ...state,
-          showProduct:action.product
+          showProduct:[...action.product]
         }
     default:
       return state;

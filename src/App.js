@@ -26,7 +26,6 @@ function App() {
       });
     }
     const productShow = JSON.parse(localStorage.getItem("productShow"));
-    console.log(productShow)
     if (productShow) {
       dispatch({
         type: "productShow",
@@ -64,11 +63,11 @@ function App() {
       children: [
         { path: "/", element: <Home /> },
         {
-          path: "/productShow",
+          path: "/productShow/:name",
           element: <ShowProduct />,
         },
         {
-          path:"/productPage",
+          path:"/productPage/:productName",
           element:<ProductPage/>
         },
         {

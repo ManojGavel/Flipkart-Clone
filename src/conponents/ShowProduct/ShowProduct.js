@@ -3,11 +3,15 @@ import { useStateValue } from "../../context/Context";
 import IndianCurrencyFormatter from "../IndianCurrencyFormatter/IndianCurrencyFormatter";
 import classes from "./showProduct.module.css";
 import StarIcon from "@mui/icons-material/Star";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function ShowProduct() {
+  const params = useParams();
   const [status, dispatch] = useStateValue();
-  console.log(status);
+
+  useEffect(() => {
+    dispatch({type:params.name})
+  },[]);
   return (
     <>
       {status.showProduct.map((element, index) => {
@@ -30,7 +34,7 @@ export default function ShowProduct() {
               })
             }
             className="text-decoration-none text-dark"
-            to="/productPage"
+            to={`/productPage/${element.name}`}
           >
             <div className="row border m-2 bg-light p-3 align-items-center">
               <img

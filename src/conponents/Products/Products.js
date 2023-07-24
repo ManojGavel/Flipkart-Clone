@@ -8,7 +8,7 @@ export default function Products() {
   const porducts = [
     {
       id: (Math.random() * 1000000000).toFixed(),
-      name: "Iphone 14/14plus",
+      name: "Iphone14_14plus",
       offer: "incl of Offers",
       image:
         "https://rukminim1.flixcart.com/image/210/210/xif0q/mobile/9/e/e/-original-imaghx9q5rvcdghy.jpeg?q=80",
@@ -61,8 +61,7 @@ export default function Products() {
                   <Link
                     key={element.id}
                     className={`text-decoration-none ${classes.link}`}
-                    onClick={() => dispatch({ type: element.name })}
-                    to="/productShow"
+                    to={`/productShow/${element.name}`}
                   >
                     <div
                       key={element.id}

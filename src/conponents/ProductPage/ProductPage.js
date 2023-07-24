@@ -22,6 +22,7 @@ export default function ProductPage() {
   const [smallImg, setSmallImg] = useState("");
   const [bigImg, setBigImg] = useState("");
    useEffect(() => {
+
     setProductRender(status.showProduct);
     let productImg = status.showProduct[0]?.img;
     // console.log(productImg);
