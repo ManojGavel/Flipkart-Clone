@@ -11,6 +11,7 @@ import Checkout from "./conponents/Checkout/Checkout";
 import { useStateValue } from "./context/Context";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./conponents/fireBase/Firebase";
+import ErrorElement from "./conponents/ErrorElement/ErrorElement";
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
     {
       path: "/",
       element: <RootLayout setModalIsVisible={setModalIsVisible} />,
+      errorElement: <ErrorElement />,
       children: [
         { path: "/", element: <Home /> },
         {
