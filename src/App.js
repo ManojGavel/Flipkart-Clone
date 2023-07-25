@@ -61,21 +61,21 @@ function App() {
       element: <RootLayout setModalIsVisible={setModalIsVisible} />,
       errorElement: <ErrorElement />,
       children: [
-        { path: "/", element: <Home /> },
+        { index:true, element: <Home /> },
         {
-          path: "/productShow/:name",
+          path: "productShow/:name",
           element: <ShowProduct />,
         },
         {
-          path:"/productPage/:productName",
+          path:"productPage/:productName",
           element:<ProductPage/>
         },
         {
-          path: "/cart",
-          element:<Cart/>
+          path: "cart",
+          element:<Cart setModalIsVisible={setModalIsVisible}/>
         },
         {
-          path: "/checkout",
+          path: "checkout",
           element:<Checkout/>
         }
       ],

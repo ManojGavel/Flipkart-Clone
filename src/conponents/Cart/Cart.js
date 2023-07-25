@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import EmptyCart from "./EmptyCart";
 import { useNavigate } from "react-router-dom";
 
-export default function Cart() {
+export default function Cart(props) {
   const navigate = useNavigate();
   const [state, dispatch] = useStateValue();
   const [price, setPrice] = React.useState();
@@ -129,7 +129,7 @@ export default function Cart() {
             }}
             size="lg"
             variant={"solid"}
-            onClick={() =>{   ; console.log("clicked to buy now")}}
+            onClick={() =>{ state.user?navigate("/checkout") :props.setModalIsVisible(true) }}
           >
             Buy Now
           </Button>{" "}
